@@ -1,0 +1,2 @@
+# MyHomework
+C# internship, BetConstruct.

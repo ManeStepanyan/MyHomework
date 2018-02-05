@@ -1,5 +1,6 @@
 # MyHomework
-C# internship, BetConstruct.
+C# internship, BetConstruct..
 
 <h1>Manes Repo</h1>
+
 

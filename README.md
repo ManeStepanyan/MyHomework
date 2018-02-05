@@ -2,5 +2,3 @@
 C# internship, BetConstruct.
 
 
-
-..

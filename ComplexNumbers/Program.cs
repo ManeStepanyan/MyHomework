@@ -6,9 +6,6 @@ using System.Threading.Tasks;
 
 
 namespace ComplexNumbers
-
-
-
 {
     class Program
     {

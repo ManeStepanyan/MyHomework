@@ -15,7 +15,7 @@ namespace Sorting
     {/// <summary>
     /// 
     /// </summary>
-    /// <param name="arr"> Array which elements we want to be printed on screen </param>
+    /// <param name="arr"> Array which elements we want to be printed out on screen </param>
     /// <param name="n"> Size of our array </param>
         static void PrintArray(int[] arr, int n)
         {

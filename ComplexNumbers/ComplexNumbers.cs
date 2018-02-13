@@ -5,11 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace ComplexNumber
+namespace ComplexNumbers
+
 
 
 {
-    public class ComplexNumbers
+    public class ComplexNumber
+
 
     {
         public struct Real

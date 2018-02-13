@@ -119,7 +119,7 @@ namespace Sorting
                     if(list[i]!=5)// Not merge sort
                     Console.WriteLine("Used memory is " + n*4  + "byte"); // Space Complexity
                     // Attention!! Local variables are not included in this calculation
-                    else Console.WriteLine("Used memory is " + 2 * n * 4 + "byte"); // As MergeSort used additional mmeory space 
+                    else Console.WriteLine("Used memory is " + 2 * n * 4 + "byte"); // As MergeSort used additional memory space 
                     Console.WriteLine("Result is");
                 if (tempList[i] == min) // In case of the Fastest Running Algorithm print array in green color
                 {

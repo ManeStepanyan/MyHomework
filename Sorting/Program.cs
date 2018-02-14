@@ -65,8 +65,7 @@ namespace Sorting
             int n = Int32.Parse(Console.ReadLine()); //Converts the string representation of a number to its 32-bit signed integer equivalent.
             Random random = new Random();
             int[] arr = new int[n]; // Creating an array to be sorted
-            int[] tempArr = new int[n]; // Array to hold the copy of arr
-            tempArr = arr;
+            int[] tempArray = new int[n]; // Array to hold the copy of arr            
             for (int i = 0; i < n; i++)
             {
                 arr[i] = random.Next(); //Initializing to our arr array random numbers
@@ -96,13 +95,16 @@ namespace Sorting
             long min = 0; // Variable for holding the fastest running time in miliseconds
             List<long> tempList = new List<long>(); // List for running time of every algorithm
             while (k < list.Count)
-            {
-                tempArr = arr; //passing copy of the array for each class's sort function every time when loop has started
+            { // Passing copy of the array for each class's sort function every time when loop has started
+                for (int i = 0; i < n; i++)
+                {
+                    tempArray[i] = arr[i];
+                } 
                 int j = list[k]; // j holds current element of list
                 k++;
                 var sw = new Stopwatch(); // calculating the running time
                 sw.Start();
-                ChooseAlgorithm(j, tempArr, n); // Finally applying the algorithm needed
+                ChooseAlgorithm(j, tempArray, n); // Finally applying the algorithm needed
                 sw.Stop(); 
                 tempList.Add(sw.ElapsedMilliseconds); //tempList contains running times of choses algorithms
                 for (int i = 0; i < tempList.Count; i++) // Finding the fastest algorithm

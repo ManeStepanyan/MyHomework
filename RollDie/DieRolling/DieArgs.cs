@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DieRolling
 { /// <summary>
@@ -14,20 +10,15 @@ namespace DieRolling
         public DieArgs(int DieValue)
         {
             this.DieValue = DieValue;
-
         }
-         public static bool operator ==(DieArgs d1, DieArgs d2)
-          {
-              if (d1.DieValue == d2.DieValue)
-                  return true;
-              return false;
-          }
-          public static bool operator !=(DieArgs d1, DieArgs d2)
-          {
-              if (d1.DieValue != d2.DieValue)
-                  return true;
-              return false;
-          }
+        public static bool operator ==(DieArgs d1, DieArgs d2)
+        {
+            return d1.DieValue == d2.DieValue;
+        }
+        public static bool operator !=(DieArgs d1, DieArgs d2)
+        {
+            return d1.DieValue != d2.DieValue;
+        }
         public override bool Equals(object obj)
         {
             return base.Equals(obj);
@@ -36,6 +27,6 @@ namespace DieRolling
         {
             return base.GetHashCode();
         }
-    } 
     }
+}
 

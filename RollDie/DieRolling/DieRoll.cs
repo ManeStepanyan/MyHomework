@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DieRolling
 {
@@ -21,7 +18,7 @@ namespace DieRolling
         private readonly List<DieArgs> Dies;
         // event to be triggered when two sixes in a row appear
         public event TwoSixes TwoSixesInARow;
-        // event to be triggered when sum of last 5 tosses are greater than or equal to 20
+        //event to be triggered when sum of last 5 tosses are greater than or equal to 20
         public event SumOfTosses SumOf5Tosses;
         /// <summary>
         /// Creates a new die
@@ -48,7 +45,6 @@ namespace DieRolling
                     Count++;
                     CallingAnEventForTwoSixes();
                 }
-
             }
             // at least 5 dies tossed
             if (Dies.Count >= 5)
@@ -64,18 +60,23 @@ namespace DieRolling
 
             }
         }
+        // Trigger an event when two sixes in a row appear
         public void CallingAnEventForTwoSixes()
-        {           
-            Console.WriteLine("Toss number " + Dies.Count);
-            TwoSixesInARow(Dies[Dies.Count - 2], Dies[Dies.Count - 1]);         
+        {
+            Console.WriteLine($"Toss number {Dies.Count}");
+            Console.WriteLine(new string('-', 50));
+            TwoSixesInARow(Dies[Dies.Count - 2], Dies[Dies.Count - 1]);
         }
+        // Trigger an event when sum of last 5 tosses is <=20
         public void CallingAnEventForSum()
         {
-            Console.WriteLine("Toss number " + Dies.Count);
-            Console.Write("Sum of last 5 tosses =" + sumOf5Tosses + " ");
+            Console.WriteLine($"Toss number {Dies.Count}");
+            Console.WriteLine($"Sum of last 5 tosses = {sumOf5Tosses} ");
+            Console.WriteLine($"{new string('-', 50)}");
             SumOf5Tosses(ListForSum[4], ListForSum[3], ListForSum[2], ListForSum[1], ListForSum[0]);
         }
 
     }
 }
+
 

@@ -72,7 +72,6 @@ namespace DieRolling
         {
             Console.WriteLine($"Toss number {Dies.Count}");
             Console.WriteLine($"Sum of last 5 tosses = {sumOf5Tosses} ");
-            Console.WriteLine($"{new string('-', 50)}");
             SumOf5Tosses(ListForSum[4], ListForSum[3], ListForSum[2], ListForSum[1], ListForSum[0]);
         }
 
